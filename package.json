@@ -9,10 +9,6 @@
     "build": "cd client && npm run build"
   },
   "dependencies": {
-
     "concurrently": "^7.3.0"
-
   }
-
 }
-
