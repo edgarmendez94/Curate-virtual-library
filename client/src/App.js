@@ -22,8 +22,4 @@ function App() {
     </ApolloProvider>
   );
 }
-<<<<<<< HEAD
-
-=======
 export default App;
->>>>>>> 3cb58e3a2418b621aafb580fbcdcf3fee575c9ab
