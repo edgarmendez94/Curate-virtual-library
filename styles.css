@@ -31,3 +31,9 @@ li {
 li a {
   padding: 14px 16px;
 }
+
+button {
+  float: right;
+  margin: 5px;
+  padding: 5px;
+}
