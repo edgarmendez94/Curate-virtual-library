@@ -11,6 +11,4 @@
   "dependencies": {
     "concurrently": "^7.3.0"
   }
-
 }
-
