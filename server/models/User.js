@@ -1,32 +1,38 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const userSchema = new Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true,
-    trim: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    match: [/.+@.+\..+/, 'Must match an email address!'],
-  },
-  password: {
-    type: String,
-    required: true,
-    minlength: 5,
-  },
-  thoughts: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Thought',
-    },
-  ],
-});
+// import schema from Images.js
+const imagesSchema = require('./Images');
 
+const userSchema = new Schema(
+  {
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      match: [/.+@.+\..+/, 'Must use a valid email address'],
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    // set storedimages to be an array of data that adheres to the imageSchema
+    storedImages: [imagesSchema],
+  },
+  // set this to use virtual below
+  {
+    toJSON: {
+      virtuals: true,
+    },
+  }
+);
+
+// hash user password
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
@@ -36,9 +42,16 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
+// custom method to compare and validate password for logging in
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
+
+// when we query a user, we'll also get another field called `imageCount` with the number of stored images we have
+userSchema.virtual('imageCount').get(function () {
+  return this.storedimages.length;
+});
+
 
 const User = model('User', userSchema);
 
