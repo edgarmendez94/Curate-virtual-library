@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Sign-up";
 
 
+
 const client = new ApolloClient({
   uri: "/graphql",
   cache: new InMemoryCache(),
@@ -20,11 +21,11 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
       <div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/sign-up" element={<Signup />} />
-          </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<Signup />} />
+      </Routes>
         </div>
         <div>
           <Header />
