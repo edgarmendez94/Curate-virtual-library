@@ -1,4 +1,10 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 // import { useQuery } from "@apollo/client";
 import "../../App.css";
 
@@ -15,12 +21,13 @@ const Footer = () => {
       <div class="links">
         <a href="">
           <i class="fa-brands fa-github"></i>
+          <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
         </a>
         <a href="https://www.facebook.com/CUSEASBootCamp/">
-          <i class="fa-brands fa-facebook-f"></i>
+          <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
         </a>
         <a href="https://www.instagram.com/explore/tags/catmemes/?hl=en">
-          <i class="fa-brands fa-instagram"></i>
+          <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
         </a>
       </div>
     </footer>
