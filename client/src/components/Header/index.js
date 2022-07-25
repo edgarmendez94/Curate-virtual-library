@@ -39,7 +39,6 @@ const Nav = () => {
           <button
             id="signUpBtn"
             type="button"
-            onclick="document.getElementById('modalSignUp').style.display='block'"
             className="btn btn-primary"
           >
             Sign Up
