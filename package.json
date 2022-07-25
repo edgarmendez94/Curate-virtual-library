@@ -9,6 +9,8 @@
     "build": "cd client && npm run build"
   },
   "dependencies": {
-    "concurrently": "^7.3.0"
+    "bootstrap": "^5.2.0",
+    "concurrently": "^7.3.0",
+    "react-bootstrap": "^2.4.0"
   }
 }
