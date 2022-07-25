@@ -12,6 +12,7 @@ import HIW from "./pages/HIW";
 import VoteHere from "./pages/VoteHere";
 import YourSubmission from "./pages/YourSubmission";
 import VirtualLibrary from "./pages/VirtualLibrary";
+import Upload from "./components/Upload";
 
 const httpLink = createHttpLink({ uri: "/graphql" })
 const authLink = setContext((_, { headers }) => {
