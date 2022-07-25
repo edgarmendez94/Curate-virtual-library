@@ -13,6 +13,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Signup from "./pages/Sign-up";
+import HIW from "./pages/HIW";
+import VoteHere from "./pages/VoteHere";
+import YourSubmission from "./pages/YourSubmission";
+import VirtualLibrary from "./pages/VirtualLibrary";
 
 const httpLink = createHttpLink({ uri: "/graphql" });
 const authLink = setContext((_, { headers }) => {
@@ -30,7 +34,9 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
+
+
+const App = () => {
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -38,8 +44,12 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/HowItWorks" element={<HIW />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/VoteHere" element={<VoteHere />} />
+            <Route path="/YourSubmission" element={<YourSubmission />} />
             <Route path="/sign-up" element={<Signup />} />
+            <Route path="/VirtualLibrary" element={<VirtualLibrary />} />
           </Routes>
         </div>
         <div>
