@@ -1,7 +1,7 @@
 import React from "react";
 // import { useQuery } from "@apollo/client";
-import Signup from "../../pages/Sign-up";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import Signup from "../../pages/Sign-up";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -14,16 +14,17 @@ const Nav = () => {
       <nav id="nav-bar">
         <ul id="navTabs">
           <li>
-            <a href="#">How It Works</a>
+            <Link to={"/HowItWorks"}>How It Works</Link>
+
           </li>
           <li>
-            <a href="#">Vote Here</a>
+            <Link to={"/VoteHere"}>Vote Here</Link>
           </li>
           <li>
-            <a href="#">Your Submission</a>
+            <Link to={"/YourSubmission"}>Your Submission</Link>
           </li>
           <li>
-            <a href="#">Virtual Library</a>
+            <Link to={"/VirtualLibrary"}>Virtual Library</Link>
           </li>
         </ul>
         <Link to={"/login"}>
