@@ -1,0 +1,39 @@
+header {
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid black 10px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  display: inline;
+  position: relative;
+  top: 10px;
+  margin-left: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 2px;
+  padding: 5px;
+  float: left;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  padding: 14px 16px;
+}
+
+button {
+  float: right;
+  margin: 5px;
+  padding: 5px;
+}

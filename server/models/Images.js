@@ -29,5 +29,14 @@ const imageSchema = new Schema({
         default: false,
     },
 });
+<<<<<<< HEAD
 
 module.exports = imageSchema;
+=======
+module.exports = imageSchema;
+
+
+
+
+
+>>>>>>> dd1a27ed2e291629246f0b79713c7f8d9e072def

@@ -1,3 +1,9 @@
+import React from "react";
 
+export default function Login(){
+    return (<>
+    <h1>Test login</h1>
 
-export default Login;
+    </>)
+}
+
