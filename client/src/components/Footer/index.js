@@ -1,6 +1,6 @@
 import React from "react";
 // import { useQuery } from "@apollo/client";
-import "./App.css";
+import "../../App.css";
 
 const Footer = () => {
   return (

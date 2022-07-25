@@ -117,3 +117,22 @@ footer p:nth-child(5) {
   line-height: 10px;
   margin-bottom: -7px;
 }
+
+/* Header */
+
+#header {
+  display: inline-flex;
+  width: 100%;
+}
+
+#nav-bar {
+  display: inline-flex;
+}
+
+#navTabs {
+  list-style: none;
+  font-size: 18px;
+  display: inline-flex;
+  padding: 3%;
+  margin: 3%;
+}

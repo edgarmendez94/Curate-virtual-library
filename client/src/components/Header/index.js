@@ -6,10 +6,26 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 const Nav = () => {
   return (
     <header id="header">
-      <nav>
+      <div>
         <h1>curate</h1>
-        <h2>A Digital Virtual Museum</h2>
+        <h3>A Digital Virtual Museum</h3>
+      </div>
 
+      <nav id="nav-bar">
+        <ul id="navTabs">
+          <li>
+            <a href="#">How It Works</a>
+          </li>
+          <li>
+            <a href="#">Vote Here</a>
+          </li>
+          <li>
+            <a href="#">Your Submission</a>
+          </li>
+          <li>
+            <a href="#">Virtual Library</a>
+          </li>
+        </ul>
         <Link to={"/login"}>
           {" "}
           <button id="signInBtn" type="button" className="btn btn-primary">
@@ -28,21 +44,6 @@ const Nav = () => {
             Sign Up
           </button>{" "}
         </Link>
-
-        <ul>
-          <li>
-            <a href="#">How It Works</a>
-          </li>
-          <li>
-            <a href="#">Vote Here</a>
-          </li>
-          <li>
-            <a href="#">Your Submission</a>
-          </li>
-          <li>
-            <a href="#">Virtual Library</a>
-          </li>
-        </ul>
       </nav>
     </header>
   );
