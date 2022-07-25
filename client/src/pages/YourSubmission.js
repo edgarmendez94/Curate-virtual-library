@@ -1,7 +1,13 @@
 import React from 'react'
+import Upload from "../components/Upload";
 
 export default function YourSubmission() {
     return (
-        <div>YourSubmission</div>
+        <div>
+            <div>YourSubmission</div>
+            <div>
+                <Upload />
+            </div>
+        </div>
     )
 }
