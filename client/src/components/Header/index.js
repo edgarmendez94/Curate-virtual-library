@@ -1,5 +1,6 @@
 import React from "react";
 // import { useQuery } from "@apollo/client";
+import Signup from "../../pages/Sign-up";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const Nav = () => {
@@ -9,9 +10,25 @@ const Nav = () => {
         <h1>curate</h1>
         <h2>A Digital Virtual Museum</h2>
 
-        <Link to={"/login"}> <button id="signInBtn" type="button" className="btn btn-primary" > Sign In </button> </Link> 
-        <Link to={"/sign-up"}> <button id="signUpBtn" type="button" className="btn btn-primary">Sign Up</button> </Link> 
-        
+        <Link to={"/login"}>
+          {" "}
+          <button id="signInBtn" type="button" className="btn btn-primary">
+            {" "}
+            Sign In{" "}
+          </button>{" "}
+        </Link>
+        <Link to={"/sign-up"}>
+          {" "}
+          <button
+            id="signUpBtn"
+            type="button"
+            onclick="document.getElementById('modalSignUp').style.display='block'"
+            className="btn btn-primary"
+          >
+            Sign Up
+          </button>{" "}
+        </Link>
+
         <ul>
           <li>
             <a href="#">How It Works</a>
