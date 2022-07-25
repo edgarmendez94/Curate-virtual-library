@@ -5,34 +5,37 @@ type User {
     _id: ID!
     username: String! 
     email: String!
-    bookCount: Int
-    savedBooks: [Book]
+    imageCount: Int
+    savedImages: [Image]
 }
 
 type Image {
     User: [User]
     description: String
-    imageId: ID
-    image: String
-    title: String
+    imageId: ID!
+    image: String!
+    title: String!
 }
 
 type Auth {
     token: ID!
     user: User
 }
+type Query {
+    me: User
+}
+
 
 input imageInput {
-    User: [User]
     description: String
-    bookId: String
-    image:String
-    title: String
+    imageId: String!
+    image: String!
+    title: String!
 }
 
 type Mutation {
     addUser(
-      username: String
+      username: String!
       email: String!
       password: String!
     ): Auth
