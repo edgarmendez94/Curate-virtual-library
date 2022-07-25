@@ -15,7 +15,6 @@ const Nav = () => {
         <ul id="navTabs">
           <li>
             <Link to={"/HowItWorks"}>How It Works</Link>
-
           </li>
           <li>
             <Link to={"/VoteHere"}>Vote Here</Link>
@@ -39,7 +38,7 @@ const Nav = () => {
           <button
             id="signUpBtn"
             type="button"
-            onclick="document.getElementById('modalSignUp').style.display='block'"
+            // onClick="document.getElementById('modalSignUp').style.display='block'"
             className="btn btn-primary"
           >
             Sign Up

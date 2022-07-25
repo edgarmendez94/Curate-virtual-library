@@ -13,14 +13,13 @@ const Footer = () => {
     <footer id="footer">
       <p>curate</p>
       <p>Copyright © 2022 curate</p>
-      <p class="contributors">
+      <p className="contributors">
         Made By: Toni, Edgar, Theo, Elliott, Michael, and Taeyong
       </p>
       <p>Thank you for visiting our Site!</p>
       <p>Be sure to check out our affiliate pages below</p>
-      <div class="links">
-        <a href="">
-          <i class="fa-brands fa-github"></i>
+      <div className="links">
+        <a href="https://github.com/edgarmendez94/virtual-library">
           <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
         </a>
         <a href="https://www.facebook.com/CUSEASBootCamp/">
