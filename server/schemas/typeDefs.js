@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
 type User {
@@ -42,6 +42,7 @@ type Mutation {
     login(email: String!, password: String!): Auth
     saveImage(imageData:imageInput!):User
     removeImage(imageId:ID!):User
+
   }
 `;
 
