@@ -6,12 +6,12 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 // import { useQuery } from "@apollo/client";
-import "./App.css";
+import "../../App.css";
 
 const Footer = () => {
   return (
     <footer id="footer">
-      <p>curate</p>
+      <p>Curate</p>
       <p>Copyright © 2022 curate</p>
       <p class="contributors">
         Made By: Toni, Edgar, Theo, Elliott, Michael, and Taeyong
