@@ -1,6 +1,6 @@
 import React from "react";
 // import { useQuery } from "@apollo/client";
-import "./App.css";
+import "../../App.css";
 
 const Footer = () => {
   return (
@@ -23,10 +23,6 @@ const Footer = () => {
           <i class="fa-brands fa-instagram"></i>
         </a>
       </div>
-      <script
-        src="https://kit.fontawesome.com/e00ef686a1.js"
-        crossorigin="anonymous"
-      ></script>
     </footer>
   );
 };
