@@ -19,7 +19,7 @@ const userSchema = new Schema(
       required: true,
     },
     // set storedimages to be an array of data that adheres to the imageSchema
-    storedImages: [imagesSchema],
+    storedImages: [{ type: Schema.Types.ObjectId, ref: "Image" }],
   },
   // set this to use virtual below
   {
