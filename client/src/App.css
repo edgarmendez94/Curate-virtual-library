@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+/* footer styling section */
+#footer {
+  position: relative;
+  width: 100%;
+  height: 205px;
+  background: #101010;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+}
