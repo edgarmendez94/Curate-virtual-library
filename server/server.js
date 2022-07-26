@@ -50,6 +50,15 @@ app.get("/images/:key", (req, res) => {
   readStream.pipe(res)
 })
 
+// getting all the images
+// app.get("/images/:key", (req, res) => {
+//   console.log(req.params)
+//   const key = req.params.key
+//   const readStream = getFileStream(key)
+
+//   readStream.pipe(res)
+// })
+
 // Upload Endpoint
 app.post('/upload', (req, res) => {
   if (req.files === null) {
