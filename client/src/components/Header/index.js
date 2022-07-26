@@ -29,19 +29,21 @@ const Nav = () => {
             <Link to={"/VirtualLibrary"}>Virtual Library</Link>
           </li>
         </ul>
-        <Link to={"/login"}>
-          {" "}
-          <button id="signInBtn" type="button" className="btn btn-primary">
+        <div>
+          <Link to={"/login"}>
             {" "}
-            Sign In{" "}
-          </button>{" "}
-        </Link>
-        <Link to={"/sign-up"}>
-          {" "}
-          <button id="signUpBtn" type="button" className="btn btn-primary">
-            Sign Up
-          </button>{" "}
-        </Link>
+            <button id="signInBtn" type="button" className="btn btn-primary">
+              {" "}
+              Sign In{" "}
+            </button>{" "}
+          </Link>
+          <Link to={"/sign-up"}>
+            {" "}
+            <button id="signUpBtn" type="button" className="btn btn-primary">
+              Sign Up
+            </button>{" "}
+          </Link>
+        </div>
       </nav>
     </header>
   );
