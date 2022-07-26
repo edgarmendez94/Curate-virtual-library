@@ -4,7 +4,7 @@ const path = require('path');
 const fileUpload = require('express-fileupload');
 const {Image} = require('./models');
 
-
+const { authMiddleware } = require("./utils/auth");
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
@@ -13,6 +13,7 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleware
 });
 
 app.use(express.urlencoded({ extended: false }));
