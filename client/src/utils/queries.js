@@ -13,3 +13,13 @@ query Me {
       }
     }
   }`;
+
+
+export const QUERY_IMAGES = gql`
+    query allImages {
+      profiles {
+        fileName
+        title
+      }
+    }
+  `;

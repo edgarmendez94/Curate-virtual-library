@@ -23,14 +23,12 @@ const VoteHere = () => {
         <main>
             <div className="flex-row justify-center">
                 <div className="col-12 col-md-10 my-3">
-                    {loading ? (
-                        <div>Loading...</div>
-                    ) : (
-                        <ImageList
-                            images={images}
-                            title="Here's the current images..."
-                        />
-                    )}
+                    <div>Loading...</div>
+                    <ImageList
+                        images={images}
+                        title="Here's the current images..."
+                    />
+                    <img src="/images/81528e3e08121282df2b686ce807dc6d"></img>
                 </div>
             </div>
         </main>
