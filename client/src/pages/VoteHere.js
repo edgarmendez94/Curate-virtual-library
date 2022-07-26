@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function VoteHere() {
     return (
-        <div>VoteHere</div>
+        <div>
+            <div>VoteHere</div>
+            <img src="/images"></img>
+        </div>
     )
 }
