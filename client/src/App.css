@@ -40,7 +40,7 @@
 
 /* footer styling section */
 #footer {
-  position: static;
+  position: absolute;
   width: 100%;
   height: 205px;
   background: #101010;
@@ -49,6 +49,9 @@
   align-items: center;
   justify-content: center;
   margin: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .links {
   display: flex;
@@ -123,16 +126,37 @@ footer p:nth-child(5) {
 #header {
   display: inline-flex;
   width: 100%;
+  background-color: #101010;
+}
+.title {
+  margin-left: 15px;
 }
 
 #nav-bar {
   display: inline-flex;
+  margin-left: 80px;
 }
 
 #navTabs {
   list-style: none;
-  font-size: 18px;
-  display: inline-flex;
+  font-size: 17px;
+  display: inline-block;
   padding: 3%;
   margin: 3%;
+  white-space: nowrap;
+}
+
+.textglow {
+  color: grey;
+}
+
+nav ul li {
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+span {
+  text-shadow: 3px 2px 4px rgb(222, 187, 222);
+  cursor: pointer;
+  color: #1a1c20;
 }
