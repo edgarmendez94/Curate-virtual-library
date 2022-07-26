@@ -41,7 +41,7 @@ app.post('/images', upload.single("file"), async (req, res) => {
     fileName: file.filename,
     title: file.originalname,
   })
-  console.log(image)
+  console.log("Look Theo this is going into the Database", image)
   res.send({ imagePath: `images/${result.Key}` })
 })
 
