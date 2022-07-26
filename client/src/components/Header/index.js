@@ -2,20 +2,22 @@ import React from "react";
 // import { useQuery } from "@apollo/client";
 // import Signup from "../../pages/Sign-up";
 import { Link } from "react-router-dom";
+import "../../App.css";
 
 const Nav = () => {
   return (
     <header id="header">
-      <div>
-        <h1>curate</h1>
-        <h3>A Digital Virtual Museum</h3>
+      <div className="title">
+        <h1>
+          <span>Curate</span>
+        </h1>
+        <h3 className="textglow">A Digital Virtual Museum</h3>
       </div>
 
       <nav id="nav-bar">
         <ul id="navTabs">
           <li>
             <Link to={"/HowItWorks"}>How It Works</Link>
-
           </li>
           <li>
             <Link to={"/VoteHere"}>Vote Here</Link>
@@ -27,23 +29,21 @@ const Nav = () => {
             <Link to={"/VirtualLibrary"}>Virtual Library</Link>
           </li>
         </ul>
-        <Link to={"/login"}>
-          {" "}
-          <button id="signInBtn" type="button" className="btn btn-primary">
+        <div>
+          <Link to={"/login"}>
             {" "}
-            Sign In{" "}
-          </button>{" "}
-        </Link>
-        <Link to={"/sign-up"}>
-          {" "}
-          <button
-            id="signUpBtn"
-            type="button"
-            className="btn btn-primary"
-          >
-            Sign Up
-          </button>{" "}
-        </Link>
+            <button id="signInBtn" type="button" className="btn btn-primary">
+              {" "}
+              Sign In{" "}
+            </button>{" "}
+          </Link>
+          <Link to={"/sign-up"}>
+            {" "}
+            <button id="signUpBtn" type="button" className="btn btn-primary">
+              Sign Up
+            </button>{" "}
+          </Link>
+        </div>
       </nav>
     </header>
   );
