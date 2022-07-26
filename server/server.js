@@ -8,6 +8,8 @@ const fileUpload = require('express-fileupload');
 const { Image } = require('./models');
 const multer = require("multer")
 const { uploadFile, getFileStream } = require("./S3")
+
+const { authMiddleware } = require("./utils/auth");
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 const upload = multer({ dest: "uploads/" })
@@ -17,6 +19,7 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleware
 });
 
 app.use(express.urlencoded({ extended: false }));
