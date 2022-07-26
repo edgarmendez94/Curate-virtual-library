@@ -2,7 +2,6 @@ import React from "react";
 // import { useQuery } from "@apollo/client";
 // import Signup from "../../pages/Sign-up";
 import { Link } from "react-router-dom";
-import Auth from '../../utils/auth';
 import "../../App.css";
 
 const Nav = () => {
@@ -30,7 +29,22 @@ const Nav = () => {
             <Link to={"/VirtualLibrary"}>Virtual Library</Link>
           </li>
         </ul>
-<<<<<<< HEAD
+
+        <div className="signInUp">
+          <Link to={"/login"}>
+            {" "}
+            <button id="signInBtn" type="button" className="btn btn-primary">
+              {" "}
+              Sign In{" "}
+            </button>{" "}
+          </Link>
+          <Link to={"/sign-up"}>
+            {" "}
+            <button id="signUpBtn" type="button" className="btn btn-primary">
+              Sign Up
+            </button>{" "}
+          </Link>
+
         <Link to={"/login"}>
           {" "}
           <button id="signInBtn" type="button" className="btn btn-primary">
@@ -49,43 +63,8 @@ const Nav = () => {
             Sign Up
           </button>{" "}
         </Link>
-=======
-        <div>
-          {Auth.loggedIn() ? (
-            <>
-              <Link to={"/profile"}>
-                {" "}
-                <button id="myPageBtn" type="button" className="btn btn-primary">
-                {" "}
-                  My Page{" "}
-                </button>{" "}
-              </Link>
-              <Link to={"/"} onClick={Auth.logout}>
-                {" "}
-                <button id="signOutBtn" type="button" className="btn btn-primary">
-                  Sign Out
-                </button>{" "}
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link to={"/login"}>
-                {" "}
-                <button id="signInBtn" type="button" className="btn btn-primary">
-                {" "}
-                  Sign In{" "}
-                </button>{" "}
-              </Link>
-              <Link to={"/sign-up"}>
-                {" "}
-                <button id="signUpBtn" type="button" className="btn btn-primary">
-                  Sign Up
-                </button>{" "}
-              </Link>
-            </>
-          )}
         </div>
->>>>>>> c4ad7fde4577b5c18f79a1a10ebe3b37e799bf0e
+
       </nav>
     </header>
   );
