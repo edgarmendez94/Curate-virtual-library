@@ -1,13 +1,12 @@
 import React from 'react'
-import Upload from "../components/Upload";
 
 export default function YourSubmission() {
     return (
         <div>
             <div>YourSubmission</div>
             <div>
-                <Upload />
+                <img src="/images/9f9c6eab2f3c2a3faa996de79ec6503d" alt="Your Submitted pic"></img>
             </div>
-        </div>
+        </div >
     )
 }

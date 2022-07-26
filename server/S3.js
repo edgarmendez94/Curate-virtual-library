@@ -1,3 +1,4 @@
+const path = require("path")
 require('dotenv').config()
 const fs = require('fs')
 const S3 = require('aws-sdk/clients/s3')
@@ -28,3 +29,13 @@ function uploadFile(file) {
 exports.uploadFile = uploadFile
 
 // downloads a file from s3
+function getFileStream(filekey) {
+    const downloadParams = {
+        Key: filekey,
+        Bucket: bucketName
+    }
+
+    return s3.getObject(downloadParams).createReadStream()
+}
+
+exports.getFileStream = getFileStream
