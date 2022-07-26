@@ -11,7 +11,7 @@ import "../../App.css";
 const Footer = () => {
   return (
     <footer id="footer">
-      <p>curate</p>
+      <p>Curate</p>
       <p>Copyright © 2022 curate</p>
       <p className="contributors">
         Made By: Toni, Edgar, Theo, Elliott, Michael, and Taeyong

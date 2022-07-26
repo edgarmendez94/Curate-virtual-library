@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 // import { useQuery } from "@apollo/client";
 
 const Home = () => {
