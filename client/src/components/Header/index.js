@@ -29,6 +29,7 @@ const Nav = () => {
             <Link to={"/VirtualLibrary"}>Virtual Library</Link>
           </li>
         </ul>
+
         <div className="signInUp">
           <Link to={"/login"}>
             {" "}
@@ -43,7 +44,27 @@ const Nav = () => {
               Sign Up
             </button>{" "}
           </Link>
+
+        <Link to={"/login"}>
+          {" "}
+          <button id="signInBtn" type="button" className="btn btn-primary">
+            {" "}
+            Sign In{" "}
+          </button>{" "}
+        </Link>
+        <Link to={"/sign-up"}>
+          {" "}
+          <button
+            id="signUpBtn"
+            type="button"
+            // onClick="document.getElementById('modalSignUp').style.display='block'"
+            className="btn btn-primary"
+          >
+            Sign Up
+          </button>{" "}
+        </Link>
         </div>
+
       </nav>
     </header>
   );

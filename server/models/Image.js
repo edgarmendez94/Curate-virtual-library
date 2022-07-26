@@ -17,7 +17,7 @@ const imageSchema = new Schema({
         type: String,
         required: false,
     },
-    image: {
+    fileName: {
         type: String,
     },
     title: {
