@@ -1,2 +1,7 @@
+import React from 'react'
 
-// export default Profile;
+export default function profile() {
+    return (
+        <div>Test Profile</div>
+    )
+}
