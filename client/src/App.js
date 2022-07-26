@@ -12,6 +12,7 @@ import HIW from "./pages/HIW";
 import VoteHere from "./pages/VoteHere";
 import YourSubmission from "./pages/YourSubmission";
 import VirtualLibrary from "./pages/VirtualLibrary";
+import Profile from "./pages/Profile";
 import Upload from "./components/Upload";
 
 const httpLink = createHttpLink({ uri: "/graphql" })
@@ -45,6 +46,7 @@ const App = () => {
             <Route path="/YourSubmission" element={<YourSubmission />} />
             <Route path="/sign-up" element={<Signup />} />
             <Route path="/VirtualLibrary" element={<VirtualLibrary />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
         <div>
