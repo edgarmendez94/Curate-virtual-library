@@ -30,7 +30,7 @@ const Login = () => {
             event.preventDefault();
             event.stopPropagation();
         }
-            
+
         try {
             const { data } = await login({
                 variables: { ...formState },
@@ -38,7 +38,7 @@ const Login = () => {
             console.log(data.login);
             Auth.login(data.login.token);
         } catch (e) {
-            console.error(e);
+            console.error(JSON.stringify(e));
         }
 
         setFormState({
