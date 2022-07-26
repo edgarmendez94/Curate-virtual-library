@@ -1,6 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Image } = require('../models');
 const { signToken } = require('../utils/auth');
+
 
 const resolvers = {
     Query: {
@@ -12,6 +13,9 @@ const resolvers = {
             throw new AuthenticationError('Not logged in');
         },
         // add image as a query
+        images: async () => {
+            return Image.find();
+        },
     },
     Mutation: {
         addUser: async (parent, args) => {

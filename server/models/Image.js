@@ -7,12 +7,12 @@ const imageSchema = new Schema({
     User: {
         type: Schema.Types.ObjectId,
         model: "User",
+        required: false,
     },
     description: {
         type: String,
         required: false,
     },
-    // saved image id from Googleimages
     imageId: {
         type: String,
         required: false,

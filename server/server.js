@@ -35,9 +35,13 @@ app.post('/images', upload.single("file"), async (req, res) => {
   const file = req.file
   console.log("this is the file", file)
   const result = await uploadFile(file)
-  // await unlinkFile(file.path)
   console.log(result)
   const description = req.body.description
+  const image = await Image.create({
+    fileName: file.filename,
+    title: file.originalname,
+  })
+  console.log(image)
   res.send({ imagePath: `images/${result.Key}` })
 })
 
@@ -46,7 +50,6 @@ app.get("/images/:key", (req, res) => {
   console.log(req.params)
   const key = req.params.key
   const readStream = getFileStream(key)
-
   readStream.pipe(res)
 })
 
@@ -61,6 +64,7 @@ app.get("/images/:key", (req, res) => {
 
 // Upload Endpoint
 app.post('/upload', (req, res) => {
+  console.log(req)
   if (req.files === null) {
     return res.status(400).json({ msg: 'No file uploaded' });
   }
@@ -72,8 +76,9 @@ app.post('/upload', (req, res) => {
       console.error(err);
       return res.status(500).send(err);
     }
+
     const image = await Image.create({
-      fileName: file.name
+      fileName: file.name,
     })
 
     console.log(image)
@@ -105,5 +110,4 @@ const startApolloServer = async (typeDefs, resolvers) => {
 
 // Call the async function to start the server
 startApolloServer(typeDefs, resolvers);
-
 
