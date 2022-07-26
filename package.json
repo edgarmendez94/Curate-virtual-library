@@ -9,13 +9,7 @@
     "build": "cd client && npm run build"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@fortawesome/fontawesome-svg-core": "^6.1.2",
-    "@fortawesome/free-solid-svg-icons": "^6.1.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-=======
     "axios": "^0.27.2",
->>>>>>> c4ad7fde4577b5c18f79a1a10ebe3b37e799bf0e
     "bootstrap": "^5.2.0",
     "concurrently": "^7.3.0",
     "react-bootstrap": "^2.4.0"
