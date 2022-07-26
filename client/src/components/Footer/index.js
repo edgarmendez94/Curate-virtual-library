@@ -19,7 +19,11 @@ const Footer = () => {
       <p>Thank you for visiting our Site!</p>
       <p>Be sure to check out our affiliate pages below</p>
       <div className="links">
+<<<<<<< HEAD
         <a href="https://github.com/edgarmendez94/virtual-library">
+=======
+        <a href="">
+>>>>>>> c4ad7fde4577b5c18f79a1a10ebe3b37e799bf0e
           <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
         </a>
         <a href="https://www.facebook.com/CUSEASBootCamp/">
