@@ -30,6 +30,26 @@ const Nav = () => {
             <Link to={"/VirtualLibrary"}>Virtual Library</Link>
           </li>
         </ul>
+<<<<<<< HEAD
+        <Link to={"/login"}>
+          {" "}
+          <button id="signInBtn" type="button" className="btn btn-primary">
+            {" "}
+            Sign In{" "}
+          </button>{" "}
+        </Link>
+        <Link to={"/sign-up"}>
+          {" "}
+          <button
+            id="signUpBtn"
+            type="button"
+            // onClick="document.getElementById('modalSignUp').style.display='block'"
+            className="btn btn-primary"
+          >
+            Sign Up
+          </button>{" "}
+        </Link>
+=======
         <div>
           {Auth.loggedIn() ? (
             <>
@@ -65,6 +85,7 @@ const Nav = () => {
             </>
           )}
         </div>
+>>>>>>> c4ad7fde4577b5c18f79a1a10ebe3b37e799bf0e
       </nav>
     </header>
   );
