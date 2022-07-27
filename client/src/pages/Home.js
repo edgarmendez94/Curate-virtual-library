@@ -1,13 +1,12 @@
 import React from "react";
 import "../App.css";
+
 // import { useQuery } from "@apollo/client";
 
 const Home = () => {
   return (
     <main>
-      <div>
-        <h1>Hello World main content goes here</h1>
-      </div>
+      <h1>main page here</h1>
     </main>
   );
 };

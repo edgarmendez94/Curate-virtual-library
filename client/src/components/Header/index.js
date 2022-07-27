@@ -2,7 +2,7 @@ import React from "react";
 // import { useQuery } from "@apollo/client";
 // import Signup from "../../pages/Sign-up";
 import { Link } from "react-router-dom";
-import Auth from '../../utils/auth';
+import Auth from "../../utils/auth";
 import "../../App.css";
 
 const Nav = () => {
@@ -36,14 +36,22 @@ const Nav = () => {
             <>
               <Link to={"/profile"}>
                 {" "}
-                <button id="myPageBtn" type="button" className="btn btn-primary">
-                {" "}
+                <button
+                  id="myPageBtn"
+                  type="button"
+                  className="btn btn-primary"
+                >
+                  {" "}
                   My Page{" "}
                 </button>{" "}
               </Link>
               <Link to={"/"} onClick={Auth.logout}>
                 {" "}
-                <button id="signOutBtn" type="button" className="btn btn-primary">
+                <button
+                  id="signOutBtn"
+                  type="button"
+                  className="btn btn-primary"
+                >
                   Sign Out
                 </button>{" "}
               </Link>
@@ -52,21 +60,28 @@ const Nav = () => {
             <>
               <Link to={"/login"}>
                 {" "}
-                <button id="signInBtn" type="button" className="btn btn-primary">
-                {" "}
+                <button
+                  id="signInBtn"
+                  type="button"
+                  className="btn btn-primary"
+                >
+                  {" "}
                   Sign In{" "}
                 </button>{" "}
               </Link>
               <Link to={"/sign-up"}>
                 {" "}
-                <button id="signUpBtn" type="button" className="btn btn-primary">
+                <button
+                  id="signUpBtn"
+                  type="button"
+                  className="btn btn-primary"
+                >
                   Sign Up
                 </button>{" "}
               </Link>
             </>
           )}
         </div>
-
       </nav>
     </header>
   );
