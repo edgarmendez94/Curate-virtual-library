@@ -30,7 +30,8 @@ const Nav = () => {
             <Link to={"/VirtualLibrary"}>Virtual Library</Link>
           </li>
         </ul>
-        <div>
+
+        <div className="signInUp">
           {Auth.loggedIn() ? (
             <>
               <Link to={"/profile"}>
@@ -65,6 +66,7 @@ const Nav = () => {
             </>
           )}
         </div>
+
       </nav>
     </header>
   );

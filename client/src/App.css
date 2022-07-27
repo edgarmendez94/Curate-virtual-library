@@ -40,7 +40,7 @@
 
 /* footer styling section */
 #footer {
-  position: absolute;
+  position: static;
   width: 100%;
   height: 205px;
   background: #101010;
@@ -144,10 +144,29 @@ footer p:nth-child(5) {
   padding: 3%;
   margin: 3%;
   white-space: nowrap;
+  flex-direction: column;
 }
 
 .textglow {
   color: grey;
+  animation: color-change 5s infinite;
+}
+@keyframes color-change {
+  0% {
+    color: thistle;
+  }
+  25% {
+    color: lavender;
+  }
+  50% {
+    color: gray;
+  }
+  75% {
+    color: lavender;
+  }
+  100% {
+    color: thistle;
+  }
 }
 
 nav ul li {
@@ -155,8 +174,12 @@ nav ul li {
   align-items: center;
   color: white;
 }
+
 span {
   text-shadow: 3px 2px 4px rgb(222, 187, 222);
   cursor: pointer;
   color: #1a1c20;
+}
+/* virtual library */
+#gallery {
 }

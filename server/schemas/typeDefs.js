@@ -12,9 +12,10 @@ type User {
 type Image {
     User: [User]
     description: String
-    imageId: ID!
-    image: String!
-    title: String!
+    imageId: ID
+    fileName: String
+    title: String
+    display: Boolean
 }
 
 type Auth {
@@ -23,6 +24,8 @@ type Auth {
 }
 type Query {
     me: User
+    images: [Image]!
+    image(imageId:ID!):Image
 }
 
 

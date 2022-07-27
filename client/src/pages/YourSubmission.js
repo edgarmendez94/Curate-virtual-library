@@ -1,13 +1,14 @@
 import React from 'react'
-import Upload from "../components/Upload";
+import FileUpload from "../components/ImageUpload";
 
-export default function YourSubmission() {
+export default function HIW() {
     return (
-        <div>
-            <div>YourSubmission</div>
-            <div>
-                <Upload />
-            </div>
+        <div className='container mt-4'>
+            <h4 className='display-4 text-center mb-4'>
+                <i className='fab fa-react' /> Submit a pic
+            </h4>
+
+            <FileUpload />
         </div>
     )
 }
