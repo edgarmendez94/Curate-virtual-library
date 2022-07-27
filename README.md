@@ -69,6 +69,8 @@ https://dashboard.heroku.com/apps/curate-22
 
 ### Virtual Library Page
 
+<img width="1306" alt="image" src="https://user-images.githubusercontent.com/102837154/181303893-e8d9a87f-4a0f-4e8a-ada1-eab169568f17.png">
+
 ### Uploading a Submission Page
 
 <img width="1440" alt="Screen Shot 2022-07-27 at 12 08 16 PM" src="https://user-images.githubusercontent.com/102837154/181296276-6c88f88c-b529-454a-b94f-95d3b43b7086.png">
