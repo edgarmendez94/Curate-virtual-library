@@ -1,15 +1,14 @@
 import React from "react";
 import "../App.css";
 // import { useQuery } from "@apollo/client";
-
+import HIW from "./HIW";
 const Home = () => {
   return (
     <main>
       <div>
-        <h1>Hello World main content goes here</h1>
+        <HIW />
       </div>
     </main>
   );
 };
-
 export default Home;
