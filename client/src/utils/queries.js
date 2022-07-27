@@ -33,7 +33,7 @@ export const GET_ME = gql`
 
 export const QUERY_IMAGES = gql`
     query allImages {
-      profiles {
+      images {
         fileName
         title
       }
