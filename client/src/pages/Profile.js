@@ -37,20 +37,20 @@ const Profile = () => {
                             <th scope='col'>Edit</th>
                             <th scope='col'>Delete</th>
                         </thead>
+                        <tbody>
+                            {images.map(image => {
+                                return (
+                                    <>
+                                    <td>{image.title}</td>
+                                    <td>{image.description}</td>
+                                    <td>{image.voters? 0 : image.voters.length}</td>
+                                    <td>Edit Btn</td>
+                                    <td>Delete Btn</td>
+                                    </>
+                                )
+                            })}
+                        </tbody>
                     </table>
-                    <tbody>
-                        {images.map(image => {
-                            return (
-                                <>
-                                <td>{image.title}</td>
-                                <td>{image.description}</td>
-                                <td>{image.voters? 0 : image.voters.length}</td>
-                                <td>Edit Btn</td>
-                                <td>Delete Btn</td>
-                                </>
-                            )
-                        })}
-                    </tbody>
                     </>
                 ) : (
                     <div className="text-center">
