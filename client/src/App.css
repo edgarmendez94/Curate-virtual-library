@@ -50,6 +50,8 @@ main {
 /* yoursubmisions */
 #submissions {
   min-height: 700px;
+  min-width: 100%;
+  background-color: antiquewhite;
 }
 /* gallery */
 #gallery {
@@ -57,6 +59,14 @@ main {
 }
 /* Vote here */
 #voteshere {
+  min-height: 700px;
+}
+/* login/signup page */
+#loginpage {
+  min-height: 700px;
+}
+/* sign in page */
+#signin {
   min-height: 700px;
 }
 /* footer styling section */
