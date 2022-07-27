@@ -10,7 +10,7 @@ const VoteHere = () => {
     return (
         <main>
             {/* <img src="https://curatebucket.s3.amazonaws.com/81528e3e08121282df2b686ce807dc6d"></img> */}
-            <img src="/images/01014889b3cfff37a2d102bb22b3737e"></img>
+            {/* <img src="/images/01014889b3cfff37a2d102bb22b3737e"></img> */}
             <div className="flex-row justify-center">
                 <div className="col-12 col-md-10 my-3">
                     <ImageList
