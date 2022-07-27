@@ -39,15 +39,11 @@ const Nav = () => {
             <>
               <Link to={"/profile"}>
                 {" "}
-<<<<<<< HEAD
-                <button id="myPageBtn" type="button" className="btn btn-primary">
-=======
                 <button
                   id="myPageBtn"
                   type="button"
                   className="btn btn-primary"
                 >
->>>>>>> a13ab9444fd8e4c03d00bd7ae2417e13e63fcbe3
                   {" "}
                   My Page{" "}
                 </button>{" "}
@@ -67,15 +63,11 @@ const Nav = () => {
             <>
               <Link to={"/login"}>
                 {" "}
-<<<<<<< HEAD
-                <button id="signInBtn" type="button" className="btn btn-primary">
-=======
                 <button
                   id="signInBtn"
                   type="button"
                   className="btn btn-primary"
                 >
->>>>>>> a13ab9444fd8e4c03d00bd7ae2417e13e63fcbe3
                   {" "}
                   Sign In{" "}
                 </button>{" "}
