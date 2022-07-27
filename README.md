@@ -4,7 +4,7 @@
 
 
 ## Description
-Introducing, curate. A revolutionizing way to view and curate image galleries. Curate was inspired by the ever-changing, digital world we live in today and allows users to view galleries of images in a digital museum. Curate also allows users to vote on what goes in the musuem, giving curate users independence and creativity. This application is a full-stack one and connects the front-end and the back end through React.js. Other technologies used include Mongo.db, Express.js, Node.js, Axios, Bootstrap, Apollo, and Graphql.
+Introducing, curate. A revolutionizing way to view and curate image galleries. Curate was inspired by the ever-changing, digital world we live in today and allows users to view galleries of images in a digital museum. Curate also allows users to upload their own image that gets put in the musuem, giving curate users independence and creativity. This application is a full-stack one and connects the front-end and the back end through React.js. Other technologies used include Mongo.db, Express.js, Node.js, Axios, Bootstrap, Apollo, and Graphql.
 
 ## Table of Contents
 
@@ -42,7 +42,7 @@ npm run develop
 
 ## Usage
 
-Once you have the application running, you will be able to access all of its functionality. Navigate to the sign up page by clicking the button labeled "Sign Up" to create an account. From there, you can either upload an image, view the curated gallery, or vote on the images of the day to determine what gets added to the musuem. 
+Once you have the application running, you will be able to access all of its functionality. Navigate to the sign up page by clicking the button labeled "Sign Up" to create an account. From there, you can either upload an image or view the curated gallery.
 
 ## Link
 
@@ -60,8 +60,6 @@ https://dashboard.heroku.com/apps/curate-22
 ### How It Works Page
 
 ### Profile Page
-
-### Voting Page
 
 ### Uploading a Submission Page
 
