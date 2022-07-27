@@ -66,7 +66,6 @@ const Nav = () => {
             </>
           )}
         </div>
-
       </nav>
     </header>
   );
