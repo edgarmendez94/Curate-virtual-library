@@ -57,6 +57,11 @@ main {
 #gallery {
   background-color: antiquewhite;
 }
+#profile {
+  background-color: antiquewhite;
+  min-height: 700px;
+  min-width: 100%;
+}
 /* Vote here */
 #voteshere {
   min-height: 700px;
