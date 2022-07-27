@@ -9,16 +9,24 @@ const FileUpload = () => {
   const [uploadedFile, setUploadedFile] = useState({});
   const [message, setMessage] = useState('');
   const [uploadPercentage, setUploadPercentage] = useState(0);
+  const [userFormData, setUserFormData] = useState({ title: "", description: "" });
 
   const onChange = e => {
     setFile(e.target.files[0]);
     setFilename(e.target.files[0].name);
   };
 
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUserFormData({ ...userFormData, [name]: value });
+  };
+
   const onSubmit = async e => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('file', file);
+    formData.append('title', userFormData.title);
+    formData.append('description', userFormData.description);
 
     try {
       const res = await axios.post('/images', formData, {
@@ -69,7 +77,21 @@ const FileUpload = () => {
         </div>
 
         <Progress percentage={uploadPercentage} />
-
+        <input
+          type='text'
+          className='form-input'
+          placeholder='Title'
+          name='title'
+          onChange={handleInputChange}
+        />
+        <textarea
+          type='text'
+          className='form-input'
+          rows='4'
+          placeholder="Description"
+          name='description'
+          onChange={handleInputChange}
+        />
         <input
           type='submit'
           value='Upload'
