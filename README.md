@@ -51,17 +51,27 @@ https://dashboard.heroku.com/apps/curate-22
 
 ## Screenshots
 
-### Home Page
+### How It Works Page
+
+<img width="1440" alt="Screen Shot 2022-07-27 at 12 07 10 PM" src="https://user-images.githubusercontent.com/102837154/181295956-627641c7-bea7-43c1-882c-7d54e03a7e09.png">
 
 ### Sign Up Page
 
-### Login page
+<img width="1440" alt="Screen Shot 2022-07-27 at 12 07 10 PM" src="https://user-images.githubusercontent.com/102837154/181297015-06de3590-53e8-4bf0-b3c3-801fdddbb39a.png">
 
-### How It Works Page
+### Login Page
+
+<img width="1440" alt="Screen Shot 2022-07-27 at 12 14 24 PM" src="https://user-images.githubusercontent.com/102837154/181297359-046a4109-a9ea-4d21-b62a-9e76754eb510.png">
 
 ### Profile Page
 
+<img width="1440" alt="Screen Shot 2022-07-27 at 12 13 32 PM" src="https://user-images.githubusercontent.com/102837154/181297198-652a11a8-b07e-43d0-bd0a-744181a5e0b9.png">
+
+### Virtual Library Page
+
 ### Uploading a Submission Page
+
+<img width="1440" alt="Screen Shot 2022-07-27 at 12 08 16 PM" src="https://user-images.githubusercontent.com/102837154/181296276-6c88f88c-b529-454a-b94f-95d3b43b7086.png">
 
 ## Contributing
 
