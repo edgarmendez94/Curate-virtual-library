@@ -28,9 +28,30 @@ const Profile = () => {
             <div className='container'>
                 <h1>My images</h1>
                 {images ? (
-                    <div>
-
-                    </div>
+                    <>
+                    <table>
+                        <thead>
+                            <th scope='col'>Title</th>
+                            <th scope='col'>Description</th>
+                            <th scope='col'>Votes Received</th>
+                            <th scope='col'>Edit</th>
+                            <th scope='col'>Delete</th>
+                        </thead>
+                    </table>
+                    <tbody>
+                        {images.map(image => {
+                            return (
+                                <>
+                                <td>{image.title}</td>
+                                <td>{image.description}</td>
+                                <td>{image.voters? 0 : image.voters.length}</td>
+                                <td>Edit Btn</td>
+                                <td>Delete Btn</td>
+                                </>
+                            )
+                        })}
+                    </tbody>
+                    </>
                 ) : (
                     <div className="text-center">
                         <h4>You did't submit any image yet.</h4>
@@ -43,20 +64,40 @@ const Profile = () => {
             </div>
             <div className='container'>
                 <h1>My votes</h1>
-                <div className='container text-center'>
                 {votes ? (
-                    <h4>Working on progress</h4>
-                ) : (
                     <>
+                    <table>
+                        <thead>
+                            <th scope='col'>Title</th>
+                            <th scope='col'>Artist</th>
+                            <th scope='col'>Description</th>
+                            <th scope='col'>Votes Received</th>
+                            <th scope='col'>Unvote</th>
+                        </thead>
+                    </table>
+                    <tbody>
+                        {votes.map(vote => {
+                            return (
+                                <>
+                                <td>{vote.votedImage.title}</td>
+                                <td>{vote.votedImage.User[0].username}</td>
+                                <td>{vote.votedImage.description}</td>
+                                <td>{vote.votedImage.voters? 0 : vote.votedImage.voters.length}</td>
+                                <td>Unvote Btn</td>
+                                </>
+                            )
+                        })}
+                    </tbody>
+                    </>
+                ) : (
+                    <div className='container text-center'>
                         <h4>You did't vote any image yet.</h4>
                         <h4>Help artists with your vote.</h4>
                         <Link to={"/VoteHere"}>
-                            <button className='btn btn-primary'>Submit your work here.</button>
+                            <button className='btn btn-primary'>Vote here.</button>
                         </Link>
-                    </>
+                    </div>
                 )}
-                </div>
-
             </div>
         </div>
     );
