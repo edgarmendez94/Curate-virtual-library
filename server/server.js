@@ -36,10 +36,10 @@ app.post('/images', upload.single("file"), async (req, res) => {
   console.log("this is the file", file)
   const result = await uploadFile(file)
   console.log(result)
-  const description = req.body.description
   const image = await Image.create({
     fileName: file.filename,
-    title: file.originalname,
+    title: req.title,
+    description: req.description
   })
   console.log("Look Theo this is going into the Database", image)
   res.send({ imagePath: `images/${result.Key}` })
