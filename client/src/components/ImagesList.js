@@ -1,9 +1,11 @@
 import React from 'react';
 
-const imageList = ({ images, title }) => {
+const ImageList = ({ images, title }) => {
+    console.log(images)
     if (!images.length) {
-        return <h3>No images Yet</h3>;
+        return <h3>No Profiles Yet</h3>;
     }
+
 
     return (
         <div>
@@ -11,11 +13,10 @@ const imageList = ({ images, title }) => {
             <div className="flex-row justify-space-between my-4">
                 {images &&
                     images.map((image) => (
-                        <div key={image} className="col-12 col-xl-6">
+                        <div key={images._id} className="col-12 col-xl-6">
                             <div className="card mb-3">
-                                <h4 className="card-header bg-dark text-light p-2 m-0">
-                                    {image} <br />
-                                </h4>
+                                <div>{image.fileName}</div>
+                                This should be a single image subtext
                             </div>
                         </div>
                     ))}
@@ -24,4 +25,4 @@ const imageList = ({ images, title }) => {
     );
 };
 
-export default imageList;
+export default ImageList;

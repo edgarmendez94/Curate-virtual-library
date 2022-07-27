@@ -17,7 +17,7 @@ query Me {
 
 export const QUERY_IMAGES = gql`
     query allImages {
-      profiles {
+      images {
         fileName
         title
       }
