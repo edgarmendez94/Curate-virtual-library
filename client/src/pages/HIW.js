@@ -24,7 +24,7 @@ export default function HIW() {
       </div>
       <br></br>
       <div className="container-fluid" style={centerText}>
-        <div className="row row-cols-2 p-1">
+        <div className="row row-cols-1 p-1">
           <div className="card col" style={cardOne}>
             <div className="card-body">
               <h5 className="card-title">Login or Create an Account</h5>
@@ -42,7 +42,7 @@ export default function HIW() {
               </p>
             </div>
           </div>
-          <div className="card col" style={cardOne}>
+          {/* <div className="card col" style={cardOne}>
             <div className="card-body">
               <h5 className="card-title">Cast Your Vote!</h5>
               <p className="card-text">
@@ -50,7 +50,7 @@ export default function HIW() {
                 the day
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="card col" style={cardOne}>
             <div className="card-body">
               <h5 className="card-title">
@@ -66,17 +66,4 @@ export default function HIW() {
       </div>
     </div>
   );
-}
-
-{
-  /* <section>
-<p>
-  Curate is the worlds first Virtual Museum platform where users hold the
-  power in deciding what gets displayed in Curate's gallery. All users
-  will have votes that they can cast on Images that other users have
-  provided and images that garner more votes then other user provided
-  Images will be displayed On Curates main gallery for all the world to
-  see.
-</p>
-</section> */
 }
