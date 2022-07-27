@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const ImageList = ({ images, title }) => {
-    console.log(images.length)
-    if (!images.length) {
-        return <h3>No Profiles Yet</h3>;
-    }
+  console.log(images.length);
+  if (!images.length) {
+    return <h3 id="voteshere">No Profiles Yet</h3>;
+  }
 
 
     return (
@@ -23,10 +23,18 @@ const ImageList = ({ images, title }) => {
                             </div>
                         </div>
                     ))}
+
             </div>
-        </div >
-    );
+          ))}
+      </div>
+    </div>
+  );
 };
 
 export default ImageList;
+
+
+{
+  /* <img src={"https://curatebucket.s3.amazonaws.com/" + image.fileName}></img>  */
+}
 

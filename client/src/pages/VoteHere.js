@@ -1,11 +1,12 @@
-import React from 'react';
-import ImageList from '../components/ImagesList'
-import { useQuery } from '@apollo/client';
-import { QUERY_IMAGES } from '../utils/queries';
+import React from "react";
+import ImageList from "../components/ImagesList";
+import { useQuery } from "@apollo/client";
+import { QUERY_IMAGES } from "../utils/queries";
 
 const VoteHere = () => {
-    const { data } = useQuery(QUERY_IMAGES);
-    const images = data?.images || [];
+  const { data } = useQuery(QUERY_IMAGES);
+  const images = data?.images || [];
+
 
     return (
         <main>
