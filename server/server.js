@@ -1,12 +1,18 @@
 const express = require('express');
+const fs = require("fs")
+// const utils = require("utils")
+// const unlinkFile = utils.promisify(fs.unlink)
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const fileUpload = require('express-fileupload');
-const {Image} = require('./models');
+const { Image } = require('./models');
+const multer = require("multer")
+const { uploadFile, getFileStream } = require("./S3")
 
 const { authMiddleware } = require("./utils/auth");
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
+const upload = multer({ dest: "uploads/" })
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -19,10 +25,46 @@ const server = new ApolloServer({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(fileUpload());
+// app.use(upload.any());
+
+// app.use(fileUpload());
+
+// from youtube video:https://www.youtube.com/watch?v=NZElg91l_ms&t=288s&ab_channel=SamMeech-Ward
+app.post('/images', upload.single("file"), async (req, res) => {
+  console.log(req.file)
+  const file = req.file
+  console.log("this is the file", file)
+  const result = await uploadFile(file)
+  console.log(result)
+  const description = req.body.description
+  const image = await Image.create({
+    fileName: file.filename,
+    title: file.originalname,
+  })
+  console.log("Look Theo this is going into the Database", image)
+  res.send({ imagePath: `images/${result.Key}` })
+})
+
+// getting an image
+app.get("/images/:key", (req, res) => {
+  console.log(req.params)
+  const key = req.params.key
+  const readStream = getFileStream(key)
+  readStream.pipe(res)
+})
+
+// getting all the images
+// app.get("/images/:key", (req, res) => {
+//   console.log(req.params)
+//   const key = req.params.key
+//   const readStream = getFileStream(key)
+
+//   readStream.pipe(res)
+// })
 
 // Upload Endpoint
 app.post('/upload', (req, res) => {
+  console.log(req)
   if (req.files === null) {
     return res.status(400).json({ msg: 'No file uploaded' });
   }
@@ -34,10 +76,11 @@ app.post('/upload', (req, res) => {
       console.error(err);
       return res.status(500).send(err);
     }
+
     const image = await Image.create({
-      fileName: file.name
+      fileName: file.name,
     })
-    
+
     console.log(image)
     res.json({ fileName: image.fileName, filePath: `/uploads/${image.fileName}` });
   });
@@ -67,5 +110,4 @@ const startApolloServer = async (typeDefs, resolvers) => {
 
 // Call the async function to start the server
 startApolloServer(typeDefs, resolvers);
-
 

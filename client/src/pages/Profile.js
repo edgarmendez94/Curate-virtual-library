@@ -7,7 +7,7 @@ import Auth from '../utils/auth';
 const Profile = () => {
     const { data } = useQuery(GET_ME);
     useEffect(() => {
-        if(data) {
+        if (data) {
             console.log(data);
         }
     }, [data]);
@@ -15,7 +15,7 @@ const Profile = () => {
     console.log(data);
     return (
         <div className='container'>
-            
+
             <h1>My images</h1>
             <h1>My votes</h1>
         </div>
