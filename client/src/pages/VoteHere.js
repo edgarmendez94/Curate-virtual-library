@@ -1,17 +1,5 @@
-// import React from 'react'
-// // import keyArr from '../../../server/server';
-
-// export default function VoteHere() {
-//     return (
-//         <div>
-//             <div>VoteHere</div>
-//             <img src="/images/a0d690bb8950c339ea968bccf01b69ac"></img>
-//         </div>
-//     )
-// }
-
 import React from 'react';
-import ImageList from '../components/ImagesList';
+import ImageList from '../components/ImagesList'
 import { useQuery } from '@apollo/client';
 import { QUERY_IMAGES } from '../utils/queries';
 
@@ -23,12 +11,11 @@ const VoteHere = () => {
         <main>
             <div className="flex-row justify-center">
                 <div className="col-12 col-md-10 my-3">
-                    <div>Loading...</div>
+                    {/* <img src="/images/81528e3e08121282df2b686ce807dc6d" alt="submitted by a user like you"></img> */}
                     <ImageList
                         images={images}
-                        title="Here's the current images..."
+                        title="Here are all of the images submitted by users like you..."
                     />
-                    <img src="/images/81528e3e08121282df2b686ce807dc6d"></img>
                 </div>
             </div>
         </main>
