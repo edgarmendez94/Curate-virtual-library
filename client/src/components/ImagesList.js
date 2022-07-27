@@ -1,9 +1,9 @@
 import React from "react";
 
 const ImageList = ({ images, title }) => {
-  console.log(images);
+  console.log(images.length);
   if (!images.length) {
-    return <h3>No Profiles Yet!</h3>;
+    return <h3 id="voteshere">No Profiles Yet</h3>;
   }
 
   return (
@@ -14,7 +14,7 @@ const ImageList = ({ images, title }) => {
           images.map((image) => (
             <div key={images._id} className="col-12 col-xl-6">
               <div className="card mb-3">
-                <div>{image.fileName}</div>
+                <div key={image.fileName}>{image.fileName}</div>
                 This should be a single image subtext
               </div>
             </div>
@@ -25,3 +25,7 @@ const ImageList = ({ images, title }) => {
 };
 
 export default ImageList;
+
+{
+  /* <img src={"https://curatebucket.s3.amazonaws.com/" + image.fileName}></img>  */
+}

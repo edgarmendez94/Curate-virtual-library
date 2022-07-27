@@ -10,7 +10,10 @@ const Nav = () => {
     <header id="header">
       <div className="title">
         <h1>
-          <span>Curate</span>
+          <Link to={"/"}>
+            <span>Curate</span>
+          </Link>
+          {/* <span>Curate</span> */}
         </h1>
         <h3 className="textglow">A Digital Virtual Museum</h3>
       </div>

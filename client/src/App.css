@@ -45,11 +45,19 @@ main {
 /* HIW */
 .main {
   background-color: antiquewhite;
+  min-height: 700px;
 }
 /* yoursubmisions */
+#submissions {
+  min-height: 700px;
+}
 /* gallery */
 #gallery {
   background-color: antiquewhite;
+}
+/* Vote here */
+#voteshere {
+  min-height: 700px;
 }
 /* footer styling section */
 #footer {
