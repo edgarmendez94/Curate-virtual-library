@@ -31,7 +31,7 @@ const Nav = () => {
         </ul>
 
         <div className="signInUp">
-          <Link to={"/login"}>
+          {/* <Link to={"/login"}>
             {" "}
             <button id="signInBtn" type="button" className="btn btn-primary">
               {" "}
@@ -43,7 +43,7 @@ const Nav = () => {
             <button id="signUpBtn" type="button" className="btn btn-primary">
               Sign Up
             </button>{" "}
-          </Link>
+          </Link> */}
 
           <Link to={"/login"}>
             {" "}
