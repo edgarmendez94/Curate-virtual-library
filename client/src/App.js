@@ -16,7 +16,7 @@ import Signup from "./pages/Sign-up";
 import HIW from "./pages/HIW";
 import VoteHere from "./pages/VoteHere";
 import YourSubmission from "./pages/YourSubmission";
-import VirtualLibrary from "./pages/VirtualLibrary";
+// import VirtualLibrary from "./pages/VirtualLibrary";
 import Profile from "./pages/Profile";
 import Upload from "./components/Upload";
 
@@ -45,13 +45,13 @@ const App = () => {
         <Header />
         <div>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HIW />} />
             <Route path="/HowItWorks" element={<HIW />} />
             <Route path="/login" element={<Login />} />
             <Route path="/VoteHere" element={<VoteHere />} />
             <Route path="/YourSubmission" element={<YourSubmission />} />
             <Route path="/sign-up" element={<Signup />} />
-            <Route path="/VirtualLibrary" element={<VirtualLibrary />} />
+            <Route path="/VirtualLibrary" element={<HIW />} />
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>

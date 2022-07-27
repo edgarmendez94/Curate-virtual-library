@@ -21,14 +21,14 @@ const Nav = () => {
             <Link to={"/HowItWorks"}>How It Works</Link>
           </li>
           <li>
-            <Link to={"/VoteHere"}>Vote Here</Link>
+            <Link to={"/VoteHere"}>Virtual Library</Link>
           </li>
           <li>
-            <Link to={"/YourSubmission"}>Your Submission</Link>
+            <Link to={"/YourSubmission"}>Submit Here</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to={"/VirtualLibrary"}>Virtual Library</Link>
-          </li>
+          </li> */}
         </ul>
 
         <div className="signInUp">
@@ -37,7 +37,7 @@ const Nav = () => {
               <Link to={"/profile"}>
                 {" "}
                 <button id="myPageBtn" type="button" className="btn btn-primary">
-                {" "}
+                  {" "}
                   My Page{" "}
                 </button>{" "}
               </Link>
@@ -53,7 +53,7 @@ const Nav = () => {
               <Link to={"/login"}>
                 {" "}
                 <button id="signInBtn" type="button" className="btn btn-primary">
-                {" "}
+                  {" "}
                   Sign In{" "}
                 </button>{" "}
               </Link>

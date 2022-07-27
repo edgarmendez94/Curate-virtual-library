@@ -16,10 +16,9 @@ const ImageList = ({ images, title }) => {
                     images.map((image) => (
                         <div key={images._id} className="col-12 col-xl-6">
                             <div className="card mb-3">
-                                <div key={image.fileName}>{image.fileName}</div>
+                                <div key={image.fileName}></div>
                                 <img src={"https://endoftheworld3.s3.amazonaws.com/" + image.fileName}></img>
                                 {/* <img src="https://endoftheworld3.s3.amazonaws.com/844cd6ed7cbd1058a2fde000618a4371"></img> */}
-                                This should be a single image subtext
                             </div>
                         </div>
                     ))}
