@@ -7,6 +7,7 @@ type User {
     email: String!
     imageCount: Int
     savedImages: [Image]
+    votedImages: [Vote]
 }
 
 type Image {
@@ -16,6 +17,13 @@ type Image {
     fileName: String
     title: String
     display: Boolean
+    voters: [Vote]
+}
+
+type Vote {
+    voteId: ID
+    voter: [User]
+    votedImage: [Image]
 }
 
 type Auth {
