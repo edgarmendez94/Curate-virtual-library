@@ -16,6 +16,16 @@ export const GET_ME = gql`
       }
       votedImages {
         voteId
+        votedImage {
+          User {
+            username
+          }
+          title
+          description
+          voters {
+            voteId
+          }
+        }
       }
     }
   }`;
