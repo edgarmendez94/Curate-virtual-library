@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 
 const centerText = {
   textAlign: "center",
@@ -15,7 +16,7 @@ const cardOne = {
 
 export default function HIW() {
   return (
-    <div>
+    <div className="main">
       <div style={centerText}>
         <h1 style={welcomeText}>Welcome to curate</h1>
         <br></br>
